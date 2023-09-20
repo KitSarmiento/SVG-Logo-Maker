@@ -37,3 +37,14 @@ function validateText(input) {
   }
   return "Please enter up to three characters.";
 }
+
+//SVG class
+class Svg {
+  constructor() {
+    this.textElement = "";
+    this.shapeElement = "";
+  }
+  render() {
+    return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${this.shapeElement}${this.textElement}</svg>`;
+  }
+}
