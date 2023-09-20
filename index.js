@@ -12,13 +12,13 @@ const questions = [
   },
   {
     type: "input",
-    name: "text-color",
+    name: "textColor",
     message:
       "Enter a color keyword (OR a hexadecimal number) for your text color:",
   },
   {
     type: "input",
-    name: "shape-color",
+    name: "shapeColor",
     message:
       "Enter a color keyword (OR a hexadecimal number) for your shape color ",
   },
@@ -63,21 +63,24 @@ async function createLogo() {
 
     let shapeElement = "";
 
+    const shapeColor = answers.shapeColor;
+    const textColor = answers.textColor;
+
     switch (answers.shape) {
       case "Triangle":
-        shapeElement = `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeColor}"/>`;
+        shapeElement = `<polygon points="150,18 244,182 56,182" fill="${answers.shapeColor}"/>`;
         break;
 
       case "Circle":
-        shapeElement = `<circle cx="150" cy="115" r="80" fill="${answers.shapeColor}"/>`;
+        shapeElement = `<circle cx="150" cy="100" r="80" fill="${answers.shapeColor}"/>`;
         break;
 
       case "Square":
-        shapeElement = `<rect x="73" y="40" width="160" height="120" fill="${answers.shapeColor}"/>`;
+        shapeElement = `<rect x="70" y="40" width="160" height="120" fill="${answers.shapeColor}"/>`;
         break;
     }
 
-    const textElement = `<text x="10" y="100" fill="${answers.textColor}" font-size="30">${answers.text}</text>`;
+    const textElement = `<text x="150" y="110" fill="${textColor}" font-size="30" text-anchor="middle" alignment-baseline="middle">${answers.text}</text>`;
 
     const svg = new Svg();
     svg.textElement = textElement;
@@ -93,6 +96,5 @@ async function createLogo() {
     console.error("Error:", error);
   }
 }
-
 // Call the init function
 init();
