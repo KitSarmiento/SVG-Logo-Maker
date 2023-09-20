@@ -8,6 +8,7 @@ const questions = [
     type: "input",
     name: "text",
     message: "Enter three (3) characters:",
+    validate: validateText,
   },
   {
     type: "input",
@@ -23,7 +24,16 @@ const questions = [
   },
   {
     type: "list",
-    message: "shape",
+    name: "shape",
+    message: "Choose a shape",
     choices: ["Triangle", "Circle", "Square"],
   },
 ];
+
+// function to validate the three characters
+function validateText(input) {
+  if (input.length <= 3) {
+    return true;
+  }
+  return "Please enter up to three characters.";
+}
