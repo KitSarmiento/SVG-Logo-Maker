@@ -89,7 +89,7 @@ async function createLogo() {
     const svgCode = svg.render();
 
     // Save the SVG to a file
-    fs.writeFileSync("logo.svg", svgCode);
+    fs.writeFileSync("./lib/logo.svg", svgCode);
 
     console.log("Generated logo.svg");
   } catch (error) {
