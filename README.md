@@ -14,7 +14,7 @@ Install the following packages:
 
 ## Usage
 
-To use this app, please open the integrated terminal and enter the command "node index.js". This will prompt a series of questions to guide you through the logo generation process. Once all questions have been correctly answered, a message will appear on the command line informing you that your logo has been created. You can find your new logo in the logo.svg file.
+To use this app, please open the integrated terminal and enter the command "node index.js". This will prompt a series of questions to guide you through the logo generation process. Once all questions have been correctly answered, a message will appear on the command line informing you that your logo has been created. You may find your generated new logo in the "lib" folder as "logo.svg".
 
 Walkthrough video: https://drive.google.com/file/d/1kiT8n0enPIKolKYtVoRpBi9S_bDFQ9hC/view
 
@@ -29,6 +29,12 @@ To test the shape classes, run "npm test" in the command line, and Jest will exe
 ![jest screenshot - test passed](https://github.com/KitSarmiento/SVG-Logo-Maker/assets/135483936/5226e12a-9f56-418e-a2d1-d6c2042c1418)
 
 ## Credits
+
+Mozilla Developer - https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
+
+W3 Schools - https://www.w3schools.com/graphics/svg_intro.asp
+
+W3C - https://www.w3.org/TR/SVG2/shapes.html
 
 Jest Tutorial - https://www.youtube.com/watch?v=FgnxcUQ5vho
 
